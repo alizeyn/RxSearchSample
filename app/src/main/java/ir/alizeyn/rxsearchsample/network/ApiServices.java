@@ -1,9 +1,6 @@
 package ir.alizeyn.rxsearchsample.network;
 
-import java.util.List;
-
 import io.reactivex.Observable;
-import ir.alizeyn.rxsearchsample.model.Movie;
 import ir.alizeyn.rxsearchsample.model.SearchResponse;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -15,6 +12,6 @@ import retrofit2.http.Query;
 public interface ApiServices {
 
     @GET("api/v1/movies")
-    Observable<SearchResponse> search(@Query("name") String name, @Query("page") int page);
+    Observable<SearchResponse> search(@Query("q") String name);
 }
 
